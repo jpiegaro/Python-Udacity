@@ -43,7 +43,7 @@ SyntaxError: invalid syntax
 7
 8
 9
->>> def print_multiplication_table(n):
+>>> def print_multiplication_table(n): # using for loop instead of the while loop (better construct)
     for i in range(1, n+1):
         for j in range(1, n+1):
             print i, "*", j, "=", i*j
