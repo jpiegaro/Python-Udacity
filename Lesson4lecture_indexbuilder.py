@@ -31,3 +31,16 @@ add_page_to_index(index,'fake.text',"This is a test")
 print index
 #>>> [['This', ['fake.text']], ['is', ['fake.text']], ['a', ['fake.text']],
 #>>> ['test',['fake.text']]]
+
+
+#****A secondary alternate method to do something similar I mocked up.
+def add_page_to_index(url,content):
+    stage1=content.split()
+    n=len(stage1)
+    stage2=[url]*n
+    stage3=map(list,zip(stage1,stage2))
+    for e in stage3:
+        e[1]=[e[1]]
+    print stage3
+	
+add_page_to_index('http://roma.org','Hello I am Joel.')
